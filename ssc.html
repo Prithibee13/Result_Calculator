@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="project.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<header class="10">
+			<h1>SSC</h1>
+		</header>
+		<nav class="nav navbar-default">
+			<ul class="nav nav-pills nav-justified" role="navigation">
+			<li role="presentation"><a href="index.html">Home</a></li>
+			<li role="presentation" ><a href="PEC.html">PEC</a></li>
+			<li role="presentation"><a href="jsc.html">JSC</a></li>
+			<li role="presentation" class="active"><a href="ssc.html">SSC</a></li>
+			<li role="presentation"><a href="Hsc.html">HSC</a></li>
+		</ul>
+	</nav>
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<aside class="main">
+		<form>
+  			<label for="Sname"><h3>Student Name :</h3></label><br>
+  			<input class="inp" type="text" id="Sname" name="Sname" placeholder="Enter your name"><br>
+  			<label for="Roll"><h3>ID : </h3></label><br>
+  			<input class="inp" type="number" id ="Roll" placeholder="Enter your ID"><br>
+		</form>
+		<button onclick="Student()">Submit</button>
+		<button oncancel="reset()">Reset</button>
+	</aside>
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+		<aside class="main">
+			<form>
+				<label><h3>Bangla 1st Paper : </h3></label>
+				<input class="inp" id="Bang1" type="number" name="" placeholder="0-100"><br>
+				<label><h3>Bangla 2nd Paper : </h3></label>
+				<input class="inp" id="Bang2" type="number" name="" placeholder="0-100"><br>
+				<label><h3>English 1st Paper : </h3></label>
+				<input class="inp" id="Eng1" type="number" name="" placeholder="0-100"><br>
+				<label><h3>English 2nd Paper : </h3></label>
+				<input class="inp" id="Eng2" type="number" name="" placeholder="0-100"><br>
+				<label><h3>Genarel Mathematics : </h3></label>
+				<input class="inp" id="Math" type="number" name="" placeholder="0-100"><br>
+				<label><h3>ICT : </h3></label>
+				<input class="inp" id="ict" type="number" name="" placeholder="0-100"><br>
+				<label><h3>Religious Studies : </h3></label>
+				<input class="inp" id="re" type="number" name="" placeholder="0-100"><br>
+				<label><h3 class="S1">Bangladesh and World Intruduction :</h3></label>
+				<input class="inp" id="BW" type="number" name="" placeholder="0-100"><br>
+				<label><h3 class="S2">Physics :</h3></label>
+				<input class="inp" id="phy" type="number" name="" placeholder="0-100"><br>
+				<label><h3 class="S3">Chemistry :</h3></label>
+				<input class="inp" id="Chm" type="number" name="" placeholder="0-100"><br>
+				<label><h3 class="S4">Higher Mathematics :</h3></label>
+				<input class="inp" id="HM" type="number" name="" placeholder="0-100"><br>
+				<label><h3 class="S5">Biology :</h3></label>
+				<input class="inp" id="Bio" type="number" name="" placeholder="0-100"><br>
+			</form>
+			<button onclick="total()">Submit</button>
+			<button>Reset</button>
+
+		</aside>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="result">
+				<h1>Your result section</h1>
+			<h2>Name : <span id="nae"></span></h2>
+			<h2>ID : <span id="rol"></span></h2>
+
+			<table>
+				<tr>
+					<th><h2>Sl No.</h2></th>
+					<th><h2>Subjects</h2></th>
+					<th><h2>Numbers</h2></th>
+					<TH><h2>Point</h2></TH>
+					<th><h2>Grades</h2></th>
+					<th><h2>Avarage GPA</h2></th>
+				</tr>
+				<tr>
+					<td><h2>1</h2></td>
+					<td><h2>Bangla</h2></td>
+					<td><h2 id="BaN"></h2></td>
+					<td><h2 id="BaP"></h2></td>
+					<td><h2 id="BaG"></h2></td>
+					<td><h2>- - -</h2></td>
+
+				</tr>
+				<tr>
+					<td><h2>2</h2></td>
+					<td><h2>English</h2></td>
+					<td><h2 id="EaN"></h2></td>
+					<td><h2 id="EaP"></h2></td>
+					<td><h2 id="EaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+
+				<tr>
+					<td><h2>3</h2></td>
+					<td><h2>Genarel Mathematics</h2></td>
+					<td><h2 id="MaN"></h2></td>
+					<td><h2 id="MaP"></h2></td>
+					<td><h2 id="MaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+
+				<tr>
+					<td><h2>3</h2></td>
+					<td><h2>ICT</h2></td>
+					<td><h2 id="IaN"></h2></td>
+					<td><h2 id="IaP"></h2></td>
+					<td><h2 id="IaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+				<tr>
+					<td><h2>4</h2></td>
+					<td><h2>Bangladesh and World Intruduction</h2></td>
+					<td><h2 id="BWaN"></h2></td>
+					<td><h2 id="BWaP"></h2></td>
+					<td><h2 id="BWaG"></h2></td>
+					<td><h2>- - -</h2></td>			
+				</tr>
+				<tr>
+					<td><h2>5</h2></td>
+					<td><h2>Religious Studies</h2></td>
+					<td><h2 id="RaN"></h2></td>
+					<td><h2 id="RaP"></h2></td>
+					<td><h2 id="RaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+				<tr>
+					<td><h2>6</h2></td>
+					<td><h2>Physics</h2></td>
+					<td><h2 id="PaN"></h2></td>
+					<td><h2 id="PaP"></h2></td>
+					<td><h2 id="PaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+				<tr>
+					<td><h2>7</h2></td>
+					<td><h2>Chemistry</h2></td>
+					<td><h2 id="CaN"></h2></td>
+					<td><h2 id="CaP"></h2></td>
+					<td><h2 id="CaG"></h2></td>
+					<td><h2>- - -</h2></td>			
+				</tr>
+				<tr>
+					<td><h2>8</h2></td>
+					<td><h2>Higher Mathematics</h2></td>
+					<td><h2 id="HaN"></h2></td>
+					<td><h2 id="HaP"></h2></td>
+					<td><h2 id="HaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+				<tr>
+					<td><h2>9</h2></td>
+					<td><h2>Biology</h2></td>
+					<td><h2 id="BiaN"></h2></td>
+					<td><h2 id="BiaP"></h2></td>
+					<td><h2 id="BiaG"></h2></td>
+					<td><h2>- - -</h2></td>
+				</tr>
+			</table>
+		</div>
+
+		<script>
+			function Student()
+			{
+				let name=document.getElementById("Sname").value;
+				let roll = document.getElementById("Roll").value;
+				if(name==undefined || roll== undefined)
+				{
+					alert("Please Fill up them");
+				}
+				document.getElementById("nae").innerHTML = name;
+  				document.getElementById("rol").innerHTML = roll;
+		}
+			function reset()
+			{
+				document.getElementById("Sname").value = null;
+				document.getElementById("Roll").value = null;
+				document.getElementById("nae").innerHTML = null;
+  				document.getElementById("rol").innerHTML = null;		
+		
+		 	}
+		</script>
+
+
+
+		<script>
+
+			function total()
+			{
+
+				let Bangla1 = document.getElementById("Bang1").value;
+				let Bangla2 = document.getElementById("Bang2").value;
+				let English1 = document.getElementById("Eng1").value;
+				let English2 = document.getElementById("Eng2").value;
+				let math = document.getElementById("Math").value;
+				let Bw = document.getElementById("BW").value;
+				let Re = document.getElementById("re").value;
+				let ICT = document.getElementById("ict").value;
+				let Physics = document.getElementById("phy").value;
+				let Chemistry = document.getElementById("Chm").value;
+				let Higher_Math = document.getElementById("HM").value;
+				let Biology  = document.getElementById("Bio").value;
+
+				Bangla = parseInt(Bangla1)+parseInt(Bangla2);
+				English = parseInt(English1)+parseInt(English2);
+
+				let Bgrade,Bpoint,Epoint,Egrade,Mpoint,Mgrade,Bwpoint,Bwgrade,Rpoint,Rgrade,Tpoint,Ipoint,Igrade,Ppoint,Pgrade,Cpoint,Cgrade,Hpoint,Hgrade,Bipoint,Bigrade;
+
+
+				if(Bangla>159)
+				{
+					Bpoint = 5.00;
+					Bgrade = "A+";
+				}
+				else if(Bangla<160 && Bangla>139)
+				{
+					Bpoint = 4.00;
+					Bgrade = "A";
+				}
+				else if(Bangla<140 && Bangla>119)	
+				{
+					Bpoint = 3.50;
+					Bgrade = "A-";
+				}
+				else if(Bangla<120 && Bangla>99)
+				{
+					Bpoint = 3.00;
+					Bgrade = "B";
+				}
+				else if(Bangla<100 && Bangla>79)
+				{
+					Bpoint = 2.00;
+					Bgrade = "C";
+				}
+				else if(Bangla<80 && Bangla>66)
+				{
+					Bpoint = 1.00;
+					Bgrade = "D";
+				}
+				else
+				{
+					Bpoint = 0.00;
+					Bgrade = "F";
+				}
+
+
+				if(English>159)
+				{
+					Epoint = 5.00;
+					Egrade = "A+";
+				}
+				else if(English<160 && English>139)
+				{
+					Epoint = 4.00;
+					Egrade = "A";
+				}
+				else if(English<140 && English>119)	
+				{
+					Epoint = 3.50;
+					Egrade = "A-";
+				}
+				else if(English<120 && English>99)
+				{
+					Epoint = 3.00;
+					Egrade = "B";
+				}
+				else if(English<100 && English>79)
+				{
+					Epoint = 2.00;
+					Egrade = "C";
+				}
+				else if(English<80 && English>66)
+				{
+					Epoint = 1.00;
+					Egrade = "D";
+				}
+				else
+				{
+					Epoint = 0.00;
+					Egrade = "F";
+				}
+
+
+				if(math>79)
+				{
+					Mpoint = 5.00;
+					Mgrade = "A+";
+				}
+				else if(math<80 && math>69)
+				{
+					Mpoint = 4.00;
+					Mgrade = "A";
+				}
+				else if(math<70 && math>59)
+				{
+					Mpoint = 3.50;
+					Mgrade = "A-";
+				}
+				else if(math<60 && math>49)
+				{
+					Mpoint = 3.00;
+					Mgrade = "B";
+				}
+				else if (math<50 && math>39)
+				{
+					Mpoint = 2.00;
+					Mgrade = "C";
+				}
+				else if(math<40 && math>32)
+				{
+					Mpoint = 1.00;
+					Mgrade = "D";
+				}
+				else
+				{
+					Mpoint = 0.00;
+					Mgrade = "F";
+				}
+
+
+				if(Bw>79)
+				{
+					Bwpoint = 5.00;
+					Bwgrade = "A+";
+				}
+				else if(Bw<80 && Bw>69)
+				{
+					Bwpoint = 4.00;
+					Bwgrade = "A";
+				}
+				else if(Bw<70 && Bw>59)
+				{
+					Bwpoint = 3.50;
+					Bwgrade = "A-";
+				}
+				else if(Bw<60 && Bw>49)
+				{
+					Bwpoint = 3.00;
+					Bwgrade = "B";
+				}
+				else if (Bw<50 && Bw>39)
+				{
+					Bwpoint = 2.00;
+					Bwgrade = "C";
+				}
+				else if(Bw<40 && Bw>32)
+				{
+					Bwpoint = 1.00;
+					Bwgrade = "D";
+				}
+				else
+				{
+					Bwpoint = 0.00;
+					Bwgrade = "F";
+				}
+
+
+
+				if(Re>79)
+				{
+					Rpoint = 5.00;
+					Rgrade = "A+";
+				}
+				else if(Re<80 && Re>69)
+				{
+					Rpoint = 4.00;
+					Rgrade = "A";
+				}
+				else if(Re<70 && Re>59)
+				{
+					Rpoint = 3.50;
+					Rgrade = "A-";
+				}
+				else if(Re<60 && Re>49)
+				{
+					Rpoint = 3.00;
+					Rgrade = "B";
+				}
+				else if (Re<50 && Re>39)
+				{
+					Rpoint = 2.00;
+					Rgrade = "C";
+				}
+				else if(Re<40 && Re>32)
+				{
+					Rpoint = 1.00;
+					Rgrade = "D";
+				}
+				else
+				{
+					Rpoint = 0.00;
+					Rgrade = "F";
+				}
+
+
+				if(ICT>79)
+				{
+					Ipoint = 5.00;
+					Igrade = "A+";
+				}
+				else if(ICT<80 && ICT>69)
+				{
+					Ipoint = 4.00;
+					Igrade = "A";
+				}
+				else if(ICT<70 && ICT>59)
+				{
+					Ipoint = 3.50;
+					Igrade = "A-";
+				}
+				else if(ICT<60 && ICT>49)
+				{
+					Ipoint = 3.00;
+					Igrade = "B";
+				}
+				else if (ICT<50 && ICT>39)
+				{
+					Ipoint = 2.00;
+					Igrade = "C";
+				}
+				else if(ICT<40 && ICT>32)
+				{
+					Ipoint = 1.00;
+					Igrade = "D";
+				}
+				else
+				{
+					Ipoint = 0.00;
+					Igrade = "F";
+				}
+
+
+
+
+				if(Physics>79)
+				{
+					Ppoint = 5.00;
+					Pgrade = "A+";
+				}
+				else if(Physics<80 && Physics>69)
+				{
+					Ppoint = 4.00;
+					Pgrade = "A";
+				}
+				else if(Physics<70 && Physics>59)
+				{
+					Ppoint = 3.50;
+					Pgrade = "A-";
+				}
+				else if(Physics<60 && Physics>49)
+				{
+					Ppoint = 3.00;
+					Pgrade = "B";
+				}
+				else if (Physics<50 && Physics>39)
+				{
+					Ppoint = 2.00;
+					Pgrade = "C";
+				}
+				else if(Physics<40 && Physics>32)
+				{
+					Ppoint = 1.00;
+					Pgrade = "D";
+				}
+				else
+				{
+					Ppoint = 0.00;
+					Pgrade = "F";
+				}
+
+
+
+				if(Chemistry>79)
+				{
+					Cpoint = 5.00;
+					Cgrade = "A+";
+				}
+				else if(Chemistry<80 && Chemistry>69)
+				{
+					Cpoint = 4.00;
+					Cgrade = "A";
+				}
+				else if(Chemistry<70 && Chemistry>59)
+				{
+					Cpoint = 3.50;
+					Cgrade = "A-";
+				}
+				else if(Chemistry<60 && Chemistry>49)
+				{
+					Cpoint = 3.00;
+					Cgrade = "B";
+				}
+				else if (Chemistry<50 && Chemistry>39)
+				{
+					Cpoint = 2.00;
+					Cgrade = "C";
+				}
+				else if(Chemistry<40 && Chemistry>32)
+				{
+					Cpoint = 1.00;
+					Cgrade = "D";
+				}
+				else
+				{
+					Cpoint = 0.00;
+					Cgrade = "F";
+				}
+
+
+
+				if(Higher_Math>79)
+				{
+					Hpoint = 5.00;
+					Hgrade = "A+";
+				}
+				else if(Higher_Math<80 && Higher_Math>69)
+				{
+					Hpoint = 4.00;
+					Hgrade = "A";
+				}
+				else if(Higher_Math<70 && Higher_Math>59)
+				{
+					Hpoint = 3.50;
+					Hgrade = "A-";
+				}
+				else if(Higher_Math<60 && Higher_Math>49)
+				{
+					Hpoint = 3.00;
+					Hgrade = "B";
+				}
+				else if (Higher_Math<50 && Higher_Math>39)
+				{
+					Hpoint = 2.00;
+					Hgrade = "C";
+				}
+				else if(Higher_Math<40 && Higher_Math>32)
+				{
+					Hpoint = 1.00;
+					Hgrade = "D";
+				}
+				else
+				{
+					Hpoint = 0.00;
+					Hgrade = "F";
+				}
+
+
+
+				if(Biology>79)
+				{
+					Bipoint = 5.00;
+					Bigrade = "A+";
+				}
+				else if(Biology<80 && Biology>69)
+				{
+					Bipoint = 4.00;
+					Bigrade = "A";
+				}
+				else if(math<70 && math>59)
+				{
+					Bipoint = 3.50;
+					Bigrade = "A-";
+				}
+				else if(Biology<60 && Biology>49)
+				{
+					Bipoint = 3.00;
+					Bigrade = "B";
+				}
+				else if (Biology<50 && Biology>39)
+				{
+					Bpoint = 2.00;
+					Bgrade = "C";
+				}
+				else if(Biology<40 && Biology>32)
+				{
+					Bipoint = 1.00;
+					Bigrade = "D";
+				}
+				else
+				{
+					Bipoint = 0.00;
+					Bigrade = "F";
+				}
+
+
+				let Total = parseInt(Bangla)+parseInt(English)+parseInt(math)+parseInt(ICT)+parseInt(Bw)+parseInt(Re)+parseInt(Physics)+parseInt(Chemistry)+
+				(Higher_Math)+(Biology);
+
+				let totalgpa = parseFloat(Bpoint)+parseFloat(Epoint)+parseFloat(Mpoint)+parseFloat(Ipoint)+parseFloat(Bwpoint)+parseFloat(Rpoint)+
+				parseFloat(Ppoint)+parseFloat(Cpoint)+parseFloat(Hpoint)+parseFloat(Bipoint);
+
+				let gpa = totalgpa - 2;
+
+				let avarage_gpa = parseFloat(parseFloat(gpa)/9);
+
+
+	    		document.getElementById("BaN").innerHTML = Bangla;
+	   			document.getElementById("EaN").innerHTML = English;
+	   			document.getElementById("MaN").innerHTML = math;
+	   			document.getElementById("BWaN").innerHTML = Bw;
+	   			document.getElementById("RaN").innerHTML = Re;
+	   			document.getElementById("IaN").innerHTML = ICT;
+	   			document.getElementById("PaN").innerHTML = Physics;
+	  			document.getElementById("CaN").innerHTML = Chemistry;
+	  			document.getElementById("HaN").innerHTML = Higher_Math;
+	  			document.getElementById("BiaN").innerHTML = Biology;	
+
+
+
+	   			document.getElementById("BaP").innerHTML = Bpoint.toFixed(2);
+	   			document.getElementById("EaP").innerHTML = Epoint.toFixed(2);
+	   			document.getElementById("MaP").innerHTML = Mpoint.toFixed(2);
+	   			document.getElementById("BWaP").innerHTML = Bwpoint.toFixed(2);
+	   			document.getElementById("RaP").innerHTML = Rpoint.toFixed(2);
+	   			document.getElementById("IaP").innerHTML = Ipoint.toFixed(2);
+	   			document.getElementById("PaP").innerHTML = Ppoint.toFixed(2);
+	   			document.getElementById("CaP").innerHTML = Cpoint.toFixed(2);
+	   			document.getElementById("HaP").innerHTML = Hpoint.toFixed(2);
+	   			document.getElementById("BiaP").innerHTML = Bipoint.toFixed(2);
+
+
+	   			document.getElementById("BaG").innerHTML = Bgrade;
+	   			document.getElementById("EaG").innerHTML = Egrade;
+	   			document.getElementById("MaG").innerHTML = Mgrade;
+	   			document.getElementById("BWaG").innerHTML = Bwgrade;
+	   			document.getElementById("RaG").innerHTML = Rgrade;
+	    		document.getElementById("IaG").innerHTML = Igrade;
+	    		document.getElementById("PaG").innerHTML = Pgrade;
+	    		document.getElementById("HaG").innerHTML = Hgrade;
+	    		document.getElementById("BiaG").innerHTML = Bigrade;
+	    		document.getElementById("CaG").innerHTML = Cgrade;
+	    	}
+
+															
+		</script>
+
+
+
+
+
+
+
+</body>
+</html>

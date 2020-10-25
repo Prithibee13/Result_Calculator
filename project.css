@@ -1,0 +1,146 @@
+header
+{
+	background-color: rgba(0,0,255,0.2);
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 20px;
+	width: 100%;
+	height: 50%;
+
+}
+
+body
+{
+	padding: 10px;
+	margin: 40px;
+	background-color: rgba(0,0,255,0.1);
+}
+
+h1
+{
+	color: rgba(0,0,255,0.6);
+	text-align: center;
+}
+
+/*nav
+{
+	font-variant: small-caps;
+	font-family: Arial, "Times New Roman";
+	font-size: 150%;
+	background-color: orange;
+}
+
+nav a
+{
+	display: inline-block;
+	font-weight: bold;
+	color: #ffffff;
+	background: rgba(0,0,255,0.2);
+	text-align: center;
+	width: 200px;
+	padding: 7px;
+	text-decoration: none;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-radius: 10px;
+	color: black;	
+	margin-left: 7%;
+}
+
+nav a:hover
+{
+	background: rgba(0,0,255,0.5);
+	color: #000c66;
+
+}
+
+nav a:active
+{
+	border: 3px solid #000000;
+}*/
+
+
+
+
+
+
+.photolist
+{
+	width: 100%;
+	max-height: 300px;
+	padding: 2%;
+}
+
+
+.main
+{
+	width: 40%;
+	margin-left: 30%;
+	margin-top: 5%;
+	margin-right: 40%;
+	border: 2px solid rgba(0,0,255,0.1);
+	border-radius: 10px;
+	padding: 12%;
+	background-color: rgba(0,0,255,0.1);
+}
+
+.Eight
+{
+	background-image: url("images/JSC.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 10%;
+}
+
+.Five
+{
+	background-image: url('images/PEC.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 12%;
+}
+
+
+button
+{
+	border-radius: 5px;
+	background-color: rgba(255,255,255,0.1);
+}
+
+.inp
+{
+	width : 100%;
+	border-radius: 5px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+table
+{
+	margin-left: 200px;
+	width: 75%;
+	border: 10px;
+	font-size: 20px;
+	font-weight: medium;
+}
+
+.result
+{
+	border: 3px solid white;
+	padding-left : 2%;
+	overflow-x:auto;
+}
+
+@media screen and (max-width: 780px){
+	.main
+	{
+		width: 70%;
+		margin-left: 15%;
+	}
+}
