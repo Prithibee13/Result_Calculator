@@ -418,12 +418,12 @@ function reset()
 
 
      let Total = parseInt(Bangla)+parseInt(English)+parseInt(math)+parseInt(ICT)+parseInt(Bw)+parseInt(Re)+parseInt(Physics)+parseInt(Chemistry)+
-     (Higher_Math)+(Biology);
+     parseInt(Higher_Math)+parseInt(Biology);
 
      let totalgpa = parseFloat(Bpoint)+parseFloat(Epoint)+parseFloat(Mpoint)+parseFloat(Ipoint)+parseFloat(Bwpoint)+parseFloat(Rpoint)+
      parseFloat(Ppoint)+parseFloat(Cpoint)+parseFloat(Hpoint)+parseFloat(Bipoint);
 
-     let gpa = totalgpa - 2;
+     let gpa = parseFloat(parseFloat(totalgpa) - 2.00);
 
      let avarage_gpa = parseFloat(parseFloat(gpa)/9);
      let Tgrade;

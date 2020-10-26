@@ -315,7 +315,7 @@ function reset()
      let totalgpa = parseFloat(Bpoint)+parseFloat(Epoint)+parseFloat(Ipoint)+parseFloat(Ppoint)+parseFloat(Cpoint)+parseFloat(Hpoint)+
      parseFloat(Bipoint);
 
-     let cgpa = parseFloat(parseFloat(totalgpa)-2);
+     let cgpa = parseFloat(parseFloat(totalgpa)-2.00);
      let avarage_gpa = parseFloat(parseFloat(cgpa)/6);
      let Tgrade;
 
