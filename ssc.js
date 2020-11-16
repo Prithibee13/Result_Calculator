@@ -390,7 +390,7 @@ function reset()
          Bipoint = 4.00;
          Bigrade = "A";
      }
-     else if(math<70 && math>59)
+     else if(Biology<70 && Biology>59)
      {
          Bipoint = 3.50;
          Bigrade = "A-";
