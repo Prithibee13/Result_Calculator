@@ -3,85 +3,151 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="project.css">
+		<link rel="stylesheet" type="text/css" href="hsc.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<header class="twelve">
-			<h1>HSC</h1>
+			<div class="hug">
+				<h1>
+					Higher
+					Secendary
+					School
+					Examination
+				</h1>
+			</div>
 		</header>
-		<nav class="nav navbar-default">
-			<ul class="nav nav-pills nav-justified" role="navigation">
-				<li role="presentation"><a href="index.html">Home</a></li>
-				<li role="presentation" ><a href="PEC.html">PEC</a></li>
-				<li role="presentation"><a href="jsc.html">JSC</a></li>
-				<li role="presentation"><a href="ssc.html">SSC</a></li>
-				<li role="presentation" class="active"><a href="Hsc.html">HSC</a></li>
-			</ul>
-		</nav>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+			  </button>
+			 
+
+			
+			  <div class="collapse navbar-collapse" id="mynav">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">
+							<span class="glyphicon glyphicon-home"></span>
+						  </a>
+					</li>
+				  <li>
+					<a href="index.html">Home</a>
+				  </li>
+				  <li>
+					<a  href="PEC.html">PEC</a>
+				  </li>
+				  <li>
+					<a  href="jsc.html">JSC</a>
+				  </li>
+				  <li>
+					<a href="ssc.html">SSC</a>
+				  </li>
+				  <li>
+					<a class="active" href="Hsc.html">HSC</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		</div>
+	</nav>
 
 		<br>
 		<br>
 		<br>
 		<br>
 		<aside class="main">
-		<form> 
-  			<label for="Sname"><h3>Student Name :</h3></label><br>
-  			<input class="inp" type="text" id="Sname" name="Sname" placeholder="Enter your name"  required><br>
-  			<label for="Roll"><h3>ID : </h3></label><br>
-			<input class="inp" type="number" id ="Roll" placeholder="Enter your ID" required><br>
-		</form>
-		<br>
-		<br>
-		<br>
-		<br>
-		<button onclick="Student()">Submit</button>
-		<button onclick="reset()">Reset</button>
+			<button id="nt" class="btn btn-info" data-toggle="modal" data-target="#student_data">Student Data</button>
+			<div class="modal fade" id="student_data">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal-title">
+								<h1>Enter Student's Name and ID</h1>
+							</div>
+					</div>
+					<div class="modal-body">
+						<form> 
+							<label for="Sname"><h3>Student Name</h3></label><br>
+							<input class="form-control-sm" type="text" id="Sname" name="Sname" placeholder="Enter your name"  required><br>
+							<label for="Roll"><h3>Student ID</h3></label><br>
+							<input class="form-control-sm" type="number" id ="Roll" placeholder="Enter your ID" required><br>
+						</form>
+						<br>
+						<br>
+						<button class="btn btn-success" onclick="Student()">Submit</button>
+						<button class="btn btn-warning" onclick="reset()">Reset</button>
+					</div>
+						<div class="modal-footer"></div>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 	</aside>
 	<br>
 	<br>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 
 
 		<aside class="main">
-			<form>
-				<label><h3>Bangla 1st Paper : </h3></label>
-				<input class="inp" id="Bang1" type="number" name="" placeholder="0-100"><br>
-				<label><h3>Bangla 2nd Paper : </h3></label>
-				<input class="inp" id="Bang2" type="number" name="" placeholder="0-100"><br>
-				<label><h3>English 1st Paper : </h3></label>
-				<input class="inp" id="Eng1" type="number" name="" placeholder="0-100"><br>
-				<label><h3>English 2nd Paper : </h3></label>
-				<input class="inp" id="Eng2" type="number" name="" placeholder="0-100"><br>
-				<label><h3>ICT : </h3></label>
-				<input class="inp" id="ict" type="number" name="" placeholder="0-100"><br>
-				<label><h3>Physics 1st Paper</h3></label>
-				<input class="inp" id="ph1" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S1">Physics 2nd Paper :</h3></label>
-				<input class="inp" id="ph2" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S2">Chemistry 1st Paper :</h3></label>
-				<input class="inp" id="ch1" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S3">Chemistry 2nd Paper :</h3></label>
-				<input class="inp" id="ch2" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S4">Higher Mathematics 1st Paper :</h3></label>
-				<input class="inp" id="HM1" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S4">Higher Mathematics 2nd Paper :</h3></label>
-				<input class="inp" id="HM2" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S5">Biology 1st Paper :</h3></label>
-				<input class="inp" id="Bio1" type="number" name="" placeholder="0-100"><br>
-				<label><h3 class="S5">Biology 2nd Paper :</h3></label>
-				<input class="inp" id="Bio2" type="number" name="" placeholder="0-100"><br>
-			</form>
-			<br>
-			<br>
-			<br>
+			<button id="nt" class="btn btn-info" data-toggle="modal" data-target="#student_marks">Student Marks</button>
+			<div class="modal fade" id="student_marks">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<div class="modal-title">
+								<h1>Enter Student's Marks</h1>
+							</div>
+					</div>
+					<div class="modal-body">
+						<form>
+							<label><h3>Bangla 1st Paper</h3>
+							<input class="form-control-sm" id="Bang1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3>Bangla 2nd Paper</h3>
+							<input class="form-control-sm" id="Bang2" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3>English 1st Paper</h3>
+							<input class="form-control-sm" id="Eng1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3>English 2nd Paper</h3>
+							<input class="form-control-sm" id="Eng2" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3>ICT</h3>
+							<input class="form-control-sm" id="ict" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3>Physics 1st Paper</h3>
+							<input class="form-control-sm" id="ph1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S1">Physics 2nd Paper</h3>
+							<input class="form-control-sm" id="ph2" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S2">Chemistry 1st Paper </h3>
+							<input class="form-control-sm" id="ch1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S3">Chemistry 2nd Paper </h3>
+							<input class="form-control-sm" id="ch2" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S4">Higher Mathematics 1st Paper</h3>
+							<input class="form-control-sm" id="HM1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S4">Higher Mathematics 2nd Paper</h3>
+							<input class="form-control-sm" id="HM2" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S5">Biology 1st Paper</h3>
+							<input class="form-control-sm" id="Bio1" type="number" name="" placeholder="0-100"></label><br><br>
+							<label><h3 class="S5">Biology 2nd Paper</h3>
+							<input class="form-control-sm" id="Bio2" type="number" name="" placeholder="0-100"></label><br><br>
+						</form>
+						<br>
+						<br>
 
-			<button onclick="total()">Submit</button>
-			<button>Reset</button>
+						<button class="btn btn-success" onclick="total()" data-dismiss="modal">Submit</button>
+						<button class="btn btn-warning">Reset</button>
+					</div>
+					<div class="modal-footer"></div>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>						
 
 		</aside>
 		
@@ -97,8 +163,10 @@
 		<h1 id="section"></h1>
 		<h2><span id="nae"></span></h2>
 		<h2><span id="rol"></span></h2>
+	</div>
 
-	<table>
+	<div class="table-responsive" id="hid">
+		<table class="table table-striped table-bordered">
 		<tr>
 			<th><h2 id="H1"></h2></th>
 			<th><h2 id="H2"></h2></th>

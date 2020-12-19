@@ -417,4 +417,6 @@ function reset()
      document.getElementById("TaP").innerHTML = totalgpa.toFixed(2);
      document.getElementById("TaaP").innerHTML = avarage_gpa.toFixed(2); 
      document.getElementById("TaG").innerHTML = Tgrade;
+
+     document.getElementById("hid").style.visibility = "visible";
 }

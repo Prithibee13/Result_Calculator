@@ -383,4 +383,6 @@ function total()
         document.getElementById("TaP").innerHTML = parseFloat(total_gpa).toFixed(2);
         document.getElementById("TaaP").innerHTML = parseFloat(avarage_gpa).toFixed(2); 
         document.getElementById("TaG").innerHTML = Tgrade;
+
+        document.getElementById("hid").style.visibility = "visible";
     }

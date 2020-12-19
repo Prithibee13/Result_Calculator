@@ -8,7 +8,7 @@ function Student()
     }
     document.getElementById("section").innerHTML = "Your result Section";
     document.getElementById("nae").innerHTML = "Name : " + name;
-      document.getElementById("rol").innerHTML = "ID : " + roll.toString();
+    document.getElementById("rol").innerHTML = "ID : " + roll.toString();
 }
 function reset()
 {
@@ -339,4 +339,6 @@ function reset()
      document.getElementById("TaP").innerHTML = total_gpa.toFixed(2);
      document.getElementById("TaaP").innerHTML = avarage_gpa.toFixed(2); 
      document.getElementById("TaG").innerHTML = Tgrade;
+
+     document.getElementById("hid").style.visibility = "visible";
  }

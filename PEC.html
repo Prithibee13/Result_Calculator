@@ -4,38 +4,98 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="project.css">
 		<link rel="stylesheet" type="text/css" href="pec.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	</head>
 
 	<body>
 		<header class="Five">
-		<h1>PEC</h1>	
+		<div class="hug">
+			<h1>
+				Primary
+				Edeucation
+				completion
+				Examination
+			</h1>
+		</div>	
 		</header>
-		<nav class="nav navbar_default">
-			<ul class="nav nav-pills nav-justified" role="navigation">
-				<li role="presentation"><a href="index.html">Home</a></li>
-				<li role="presentation" class="active"><a href="PEC.html">PEC</a></li>
-				<li role="presentation"><a href="jsc.html">JSC</a></li>
-				<li role="presentation"><a href="ssc.html">SSC</a></li>
-				<li role="presentation"><a href="Hsc.html">HSC</a></li>
-		</ul>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+			  </button>
+			 
+
+			
+			  <div class="collapse navbar-collapse" id="mynav">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">
+							<span class="glyphicon glyphicon-home"></span>
+						  </a>
+					</li>
+				  <li>
+					<a href="index.html">Home</a>
+				  </li>
+				  <li>
+					<a class="active" href="PEC.html">PEC</a>
+				  </li>
+				  <li>
+					<a href="jsc.html">JSC</a>
+				  </li>
+				  <li>
+					<a href="ssc.html">SSC</a>
+				  </li>
+				  <li>
+					<a href="Hsc.html">HSC</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		</div>
 	</nav>
 	<br>
 	<br>
 	
 
 	<aside class="main">
-	<form>
-  		<label><h3>Student Name : </h3><br>
-  		<input  class="inp" type="text" id="Sname" name="Student name" placeholder="Enter your Name"></label><br><br>
-  		<label for="Roll"><h3>Student Id : </h3><br>
-  		<input class="inp" type="number" id ="Roll" name="roll" placeholder="Enter your ID"></label><br>
-  		
-</form>
-	<br>
-	<button onclick = "Student()">Submit</button>
-	<button onclick = "reset()">Reset</buton>
+		<button id="nt" class="btn btn-info" data-toggle="modal" data-target="#student_data">Student Data</button>
+		<div class="modal fade" id="student_data">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">
+							Enter Student's Name and ID
+						</div>
+					</div>
+					<div class="modal-body">
+						<form>
+							<label><h3>Student Name</h3>
+							<input  class="form-control" type="text" id="Sname" name="Student name" placeholder="Enter your Name"></label><br><br>
+							<label for="Roll"><h3>Student ID</h3>
+							<input class="form-control" type="number" id ="Roll" name="roll" placeholder="Enter your ID"></label><br>
+						</form>
+						<br>
+						<br>
+						<br>
+						<button class="btn btn-success" data-dismiss="modal" onclick = "Student()">Submit</button>
+						<button class="btn btn-warning" onclick = "reset()">Reset</buton>
+					</div>
+					<div class="modal-footer"></div>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+			</div>
+				</div>
+			</div>
+		</div>
+		
+
 	</aside>
 	<br>
 	<br>
@@ -43,39 +103,53 @@
 	<br>
 	<br>
 	<aside class="main">
-		<h1>Enter your marks</h1>
-		<form>
-			<label> Bangla :
-				<input class="inp" id="bang" type="number" name="B" placeholder="0-100">
+		<button class="btn btn-info" id ="nt" data-toggle="modal" data-target="#student_marks">Student Marks</button>
+		<div class="modal fade" id="student_marks">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">
+							<h1>Enter your marks</h1>
+						</div>
+					</div>
+					<div class="modal-body">
+						<form>
+							<label> Bangla
+								<input class="form-control" id="bang" type="number" name="B" placeholder="0-100">
 
-			</label><br><br>
-			<label> English :
-				<input class="inp" id="eng" type="number" name="B" placeholder="0-100">
+							</label><br><br>
+							<label> English
+								<input class="form-control" id="eng" type="number" name="B" placeholder="0-100">
 
-			</label><br><br>
-			<label> Mathematics :
-				<input class="inp" id="math" type="number" name="M" placeholder="0-100">
-			</label><br><br>
-			<label> General Science :
-				<input class="inp" id="gs" type="number" name="G" placeholder="0-100">
-			</label><br><br>
-			<label> Sciocal Science :
-				<input class="inp" id="ss" type="number" name="S" placeholder="0-100">
-			</label><br>
-			<br>
-			<label> Religious Studies :
-				<input class="inp" id="re" type="number" name="R" placeholder="0-100">
-			</label><br>
+							</label><br><br>
+							<label> Mathematics
+								<input class="form-control" id="math" type="number" name="M" placeholder="0-100">
+							</label><br><br>
+							<label> General Science
+								<input class="form-control" id="gs" type="number" name="G" placeholder="0-100">
+							</label><br><br>
+							<label> Sciocal Science
+								<input class="form-control" id="ss" type="number" name="S" placeholder="0-100">
+							</label><br>
+							<br>
+							<label> Religious Studies
+								<input class="form-control" id="re" type="number" name="R" placeholder="0-100">
+							</label><br>
+						</form>
+						<br>
+						<br>
+						<br>
+						<button class="btn btn-success" onclick="total()" data-dismiss="modal">Submit</button>
+						<button class = "btn btn-warning">Reset</button>
+					</div>
+					<br>
+					<br>
+					<div class="modal-footer"></div>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
 
-		</form>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-
-		<button onclick="total()">Submit</button>
-		<button>Reset</button>
 	</aside>
 	<br>
 	<br>
@@ -89,8 +163,10 @@
 		<h1 id="section"></h1>
 	<h2><span id="nae"></span></h2>
 	<h2><span id="rol"></span></h2>
-	<table>
-		<tr>
+
+	<div class="table-responsive" id="hid">
+			<table class="table table-striped table-bordered">
+		<tr class="table-dark">
 			<th><h2 id="H1"></h2></th>
 			<th><h2 id="H2"></h2></th>
 			<th><h2 id="H3"></h2></th>
@@ -151,6 +227,8 @@
 		<td><h2 id="TaaP"></h2></td>
 	</tr>
 	</TABLE>
+	</div>
+
 	</div>
 
 

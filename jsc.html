@@ -3,35 +3,94 @@
 	<head>
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="project.css">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="jsc.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
 		<header class="Eight">
-		<h1>JSC</h1>	
+
+			<div class="hug">
+				<h1 id="nw">Junior
+				School
+				Examination
+			</h1>
+			</div>
+				
 		</header>
-		<nav class="nav navbar-default">
-		<ul class="nav nav-pills nav-justified" role="navigation">
-		<li role="presentation"><a href="index.html">Home</a></li>
-		<li role="presentation"><a href="PEC.html">PEC</a></li>
-		<li role="presentation"  class="active"><a href="jsc.html">JSC</a></li>
-		<li role="presentation"><a href="ssc.html">SSC</a></li>
-		<li role="presentation"><a href="Hsc.html">HSC</a></li>
-	</ul>
-</nav>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+			  </button>
+			 
+
+			
+			  <div class="collapse navbar-collapse" id="mynav">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="index.html">
+							<span class="glyphicon glyphicon-home"></span>
+						  </a>
+					</li>
+				  <li>
+					<a href="index.html">Home</a>
+				  </li>
+				  <li>
+					<a  href="PEC.html">PEC</a>
+				  </li>
+				  <li>
+					<a class="active" href="jsc.html">JSC</a>
+				  </li>
+				  <li>
+					<a href="ssc.html">SSC</a>
+				  </li>
+				  <li>
+					<a href="Hsc.html">HSC</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<br>
 	<div class="ps">
 	</div>
 
 	<aside class="main">
-	<form>
-  		<label for="Sname">Student Name:</label><br>
-  		<input class="inp" type="text" id="Sname" name="Sname"><br>
-  		<label for="Roll">Roll</label><br>
-  		<input class="inp" type="number" id ="Roll"><br>
-	</form>
-	<br>
-	<button onclick = "Student()">Submit</button>
-	<button onclick = "reset()">Reset</buton>
+		<button id="nt" class="btn btn-info" data-toggle="modal" data-target="#student_data">Student Data</button>
+		<div class="modal fade" id="student_data">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">
+							Student's Name and ID
+						</div>
+					</div>
+					<div class="modal-body">
+						<form>
+  							<label for="Sname"><h3>Student Name</h3>
+  							<input class="form-control-sm" type="text" id="Sname" name="Sname"></label><br><br>
+  							<label for="Roll"><h3> Student ID</h3>
+  							<input class="form-control-sm" type="number" id ="Roll"></label><br><br>
+							</form>
+							<br>
+							<button class="btn btn-success" onclick = "Student()" data-dismiss="modal">Submit</button>
+							<button class="btn btn-warning" onclick = "reset()">Reset</buton>
+					</div>
+					<div class="modal-footer"></div>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</aside>
 	<br>
 	<br>
@@ -39,37 +98,53 @@
 	<br>
 	<br>
 	<aside class="main">
-		<h1>Enter your marks</h1>
-		<form>
-			<label> Bangla :
-				<input class="inp" id="bang" type="number" name="B" placeholder="0-100">
+		<button id="nt" class="btn btn-info" data-toggle="modal" data-target="#student_marks">Student Marks</button>
+		<div class="modal fade" id="student_marks">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<div class="modal-title">
+							<h1>Enter your marks</h1>
+						</div>
+					</div>
+					<div class="modal-body">
+						<form>
+							<label><h3>Bangla</h3>
+								<input class="form-control-sm" id="bang" type="number" name="B" placeholder="0-100">
 
-			</label><br><br>
-			<label> English :
-				<input class="inp" id="eng" type="number" name="B" placeholder="0-100">
+							</label><br><br>
+							<label><h3>English</h3>
+								<input class="form-control-sm" id="eng" type="number" name="B" placeholder="0-100">
 
-			</label><br><br>
-			<label> Mathematics :
-				<input class="inp" id="math" type="number" name="M" placeholder="0-100">
-			</label><br><br>
-			<label>Science :
-				<input class="inp" id="gs" type="number" name="G" placeholder="0-100">
-			</label><br><br>
-			<label> Bangladesh and Word Introduction :
-				<input class="inp" id="ss" type="number" name="S" placeholder="0-100">
-			</label><br>
-			<br>
-			<label> Religious Studies :
-				<input class="inp" id="re" type="number" name="R" placeholder="0-100">
-			</label><br>
-			<br>
-			<label>ICT :
-				<input class="inp" id="ICT" type="number" name="R" placeholder="0-50">
-			</label>
+							</label><br><br>
+							<label><h3> Mathematics</h3>
+								<input class="form-control-sm" id="math" type="number" name="M" placeholder="0-100">
+							</label><br><br>
+							<label><h3>Science</h3>
+								<input class="form-control-sm" id="gs" type="number" name="G" placeholder="0-100">
+							</label><br><br>
+							<label> <h3>B B P</h3>
+								<input class="form-control-sm" id="ss" type="number" name="S" placeholder="0-100">
+							</label><br><br>
+							<br>
+							<label> <h3>Religious Studies</h3>
+								<input class="form-control-sm" id="re" type="number" name="R" placeholder="0-100">
+							</label><br><br>
+							<br>
+							<label><h3>ICT</h3>
+								<input class="form-control-sm" id="ICT" type="number" name="R" placeholder="0-50">
+							</label><br><br>
 
-		</form>
-		<button onclick="total()">Submit</button>
-		<button>Reset</button>
+						</form>
+						<br>
+						<button class="btn btn-success" onclick="total()" data-dismiss="modal">Submit</button>
+						<button class="btn btn-warning">Reset</button>
+					</div>
+					<div class="modal-footer"></div>
+						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
 	</aside>
 	<br>
 	<br>
@@ -82,7 +157,8 @@
 		<h1 id="section"></h1>
 	<h2><span id="nae"></span></h2>
 	<h2><span id="rol"></span></h2>
-	<table>
+	<div class="table-responsive" id="hid">
+	<table class="table table-striped table-bordered">
 			<tr>
 				<th><h2 id="H1"></h2></th>
 				<th><h2 id="H2"></h2></th>
@@ -156,6 +232,8 @@
 
 
 	</TABLE>
+</div>
+</div>
 		<script src="jsc.js"></script>
 
 	</body>
